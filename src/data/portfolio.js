@@ -107,7 +107,7 @@ export const portfolioData = {
       description: "Document-grounded Q&A chatbot with PDF ingestion, chunking, embeddings, and conversational memory.",
       tags: ["FastAPI", "Groq", "Sentence Transformers", "ChromaDB"],
       link: "https://github.com/ibacorpration",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600"
+      image: "/ai-assistant.png"
     }
   ],
   experience: [
