@@ -32,13 +32,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="order-2 lg:order-1"
         >
           <span className="pill mb-6">AI ENGINEER</span>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 leading-tight">
             Hi, I'm <span className="gradient-text">{name}</span>
           </h1>
           
-          <div className="text-2xl md:text-3xl font-semibold mb-6 h-10 flex items-center">
+          <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 h-10 flex items-center">
             <span className="mr-2">I build</span>
             <motion.span
               key={passionIndex}
@@ -51,20 +52,20 @@ const Hero = () => {
             </motion.span>
           </div>
           
-          <p className="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed">
+          <p className="text-gray-400 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
             {summary}
           </p>
           
           <div className="flex flex-wrap gap-4 mb-12">
-            <a href="#projects" className="gradient-btn">View My Work ↗</a>
-            <a href="https://flowcv.com/resume/632mgn0l0jsd" target="_blank" rel="noreferrer" className="outline-btn">
+            <a href="#projects" className="gradient-btn w-full sm:w-auto justify-center">View My Work ↗</a>
+            <a href="https://flowcv.com/resume/632mgn0l0jsd" target="_blank" rel="noreferrer" className="outline-btn w-full sm:w-auto justify-center">
               Download CV <FiDownload />
             </a>
           </div>
 
           <div>
-            <p className="text-sm text-gray-500 font-semibold mb-4 tracking-wider uppercase">Technologies I work with</p>
-            <div className="flex gap-4 text-3xl">
+            <p className="text-xs md:text-sm text-gray-500 font-semibold mb-4 tracking-wider uppercase">Technologies I work with</p>
+            <div className="flex flex-wrap gap-4 text-2xl md:text-3xl">
               {technologies.map((Tech, i) => (
                 <Tech.icon key={i} className={`hover:-translate-y-1 transition-transform cursor-pointer ${Tech.color}`} />
               ))}
@@ -77,12 +78,12 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative lg:justify-self-end w-full max-w-lg mx-auto lg:mx-0 flex flex-col items-center"
+          className="relative lg:justify-self-end w-full max-w-lg mx-auto lg:mx-0 flex flex-col items-center order-1 lg:order-2"
         >
           {/* Main Photo with gradient mask */}
-          <div className="relative w-full aspect-square max-w-[380px] mb-8 group">
+          <div className="relative w-full aspect-square max-w-[300px] md:max-w-[380px] mb-8 group">
             {/* Background Glows */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-gradient-to-tr from-primary/30 to-secondary/30 rounded-full blur-[80px] -z-10 group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-700"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-gradient-to-tr from-primary/30 to-secondary/30 rounded-full blur-[60px] md:blur-[80px] -z-10 group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-700"></div>
             
             {/* Image Container with Mask */}
             <motion.div 
@@ -108,7 +109,7 @@ const Hero = () => {
           </div>
 
           {/* Floating Social Squares */}
-          <div className="flex flex-wrap justify-center gap-4 z-10 w-full max-w-[400px]">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 z-10 w-full max-w-[350px] md:max-w-[400px]">
             {socials.map((social, i) => (
               <motion.a 
                 key={i} 
@@ -118,10 +119,10 @@ const Hero = () => {
                 href={social.url} 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-14 h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl flex items-center justify-center hover:bg-gradient-to-tr hover:from-secondary hover:to-primary hover:border-transparent hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-2 transition-all duration-300 group/social"
+                className="w-12 h-12 md:w-14 md:h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl flex items-center justify-center hover:bg-gradient-to-tr hover:from-secondary hover:to-primary hover:border-transparent hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-2 transition-all duration-300 group/social"
                 title={social.name}
               >
-                <social.icon className="text-2xl text-gray-400 group-hover/social:text-white transition-colors" />
+                <social.icon className="text-xl md:text-2xl text-gray-400 group-hover/social:text-white transition-colors" />
               </motion.a>
             ))}
           </div>
