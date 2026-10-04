@@ -8,6 +8,7 @@ const CountUpInline = ({ end, duration = 2, suffix = '' }) => {
 
   return (
     <motion.span
+      viewport={{ once: true }}
       onViewportEnter={() => {
         if (!hasStarted) {
           setHasStarted(true);
