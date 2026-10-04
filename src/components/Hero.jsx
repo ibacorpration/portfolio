@@ -88,20 +88,20 @@ const Hero = () => {
             <motion.div 
               animate={{ y: [0, -15, 0] }} 
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="w-full h-full rounded-3xl overflow-hidden relative border border-white/5 bg-gradient-to-b from-white/10 to-transparent p-2 shadow-2xl"
+              className="w-full h-full relative"
             >
               <div 
-                className="w-full h-full rounded-2xl overflow-hidden bg-[#0A0A1F]"
+                className="w-full h-full"
                 style={{
-                  maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)'
+                  maskImage: 'radial-gradient(circle at center, black 50%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 80%)'
                 }}
               >
                 <img 
                   src="/me.jpg" 
                   alt={name} 
-                  className="w-full h-full object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-700" 
-                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Ibrahem&background=0D8ABC&color=fff&size=512' }} 
+                  className="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-700" 
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Ibrahem&background=0D8ABC&color=fff&size=512&rounded=true' }} 
                 />
               </div>
             </motion.div>
