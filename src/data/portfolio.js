@@ -91,7 +91,7 @@ export const portfolioData = {
       description: "Face-recognition attendance platform with liveness detection and a RAG chatbot.",
       tags: ["YuNet", "ArcFace", "ONNX", "FastAPI", "React", "Gemini", "Docker"],
       link: "https://iba-corpration.up.railway.app/",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=600"
+      image: "/attendance.png"
     },
     {
       id: "02",
