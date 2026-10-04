@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A1F",
-        cardbg: "#11112B",
-        primary: "#8B5CF6", // purple
-        secondary: "#6366F1", // indigo
+        background: "#050510",
+        cardbg: "#0B0C1E",
+        primary: "#00F0FF", // cyan
+        secondary: "#E024CE", // magenta
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
