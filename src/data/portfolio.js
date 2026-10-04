@@ -13,8 +13,8 @@ export const portfolioData = {
       { name: "GitHub", url: "https://github.com/ibacorpration", icon: FiGithub },
       { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
       { name: "Phone", url: "tel:01273446781", icon: FiPhone },
-      { name: "Kaggle", url: "#", icon: SiKaggle },
-      { name: "Hugging Face", url: "#", icon: SiHuggingface }
+      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle },
+      { name: "Hugging Face", url: "https://huggingface.co/", icon: SiHuggingface }
     ]
   },
   about: {
@@ -97,7 +97,7 @@ export const portfolioData = {
       title: "Smart Safe Road",
       description: "Real-time traffic monitoring: vehicle detection, tracking, speed estimation, Arabic license plate recognition.",
       tags: ["YOLOv8", "ByteTrack", "OCR", "Computer Vision"],
-      link: "#",
+      link: "https://github.com/ibacorpration",
       image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&q=80&w=600"
     },
     {
@@ -105,7 +105,7 @@ export const portfolioData = {
       title: "Tourism AI Assistant",
       description: "Document-grounded Q&A chatbot with PDF ingestion, chunking, embeddings, and conversational memory.",
       tags: ["FastAPI", "Groq", "Sentence Transformers", "ChromaDB"],
-      link: "#",
+      link: "https://github.com/ibacorpration",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600"
     }
   ],
