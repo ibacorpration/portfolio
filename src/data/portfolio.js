@@ -11,11 +11,10 @@ export const portfolioData = {
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/ibrahem-sayed-1b38722a4", icon: FiLinkedin },
       { name: "GitHub", url: "https://github.com/ibacorpration", icon: FiGithub },
-      { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
-      { name: "Phone", url: "tel:01273446781", icon: FiPhone },
-      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle },
-      { name: "Hugging Face", url: "https://huggingface.co/", icon: SiHuggingface },
       { name: "WhatsApp", url: "https://wa.me/201273446781", icon: SiWhatsapp }
+      { name: "Phone", url: "tel:01273446781", icon: FiPhone },
+      { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
+      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle },
     ]
   },
   about: {
