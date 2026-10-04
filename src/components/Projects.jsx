@@ -14,13 +14,16 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
-          <motion.div
+          <motion.a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="glass-card group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-300 flex flex-col h-full overflow-hidden"
+            className="glass-card group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-300 flex flex-col h-full overflow-hidden block cursor-pointer"
           >
             <div className="h-48 overflow-hidden relative">
               <div className="absolute top-4 left-4 z-10 text-white/50 font-bold text-lg">
@@ -46,16 +49,11 @@ const Projects = () => {
                 ))}
               </div>
               
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noreferrer"
-                className="text-primary text-sm font-semibold flex items-center gap-2 hover:text-white transition-colors mt-auto w-fit"
-              >
+              <div className="text-primary text-sm font-semibold flex items-center gap-2 group-hover:text-white transition-colors mt-auto w-fit">
                 View Project <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
+              </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
       
