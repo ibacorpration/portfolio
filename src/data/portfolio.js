@@ -3,11 +3,11 @@ import { SiKaggle, SiHuggingface, SiPython, SiCplusplus, SiOpencv, SiTensorflow,
 
 import React from 'react';
 
-const HuggingFaceIcon = ({ className }) => React.createElement("img", {
-  src: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-  alt: "Hugging Face",
+const RealIcon = (src) => ({ className }) => React.createElement("img", {
+  src: src,
+  alt: "icon",
   className: className,
-  style: { width: '1em', height: '1em' }
+  style: { width: '1.2em', height: '1.2em', objectFit: 'contain' }
 });
 
 export const portfolioData = {
@@ -18,12 +18,12 @@ export const portfolioData = {
     passions: ["Computer Vision", "RAG Chatbots", "Deep Learning", "AI Automation"],
     summary: "I build intelligent AI systems. With a strong foundation in machine learning and deep learning, I help create smart solutions from computer vision models to document-grounded RAG chatbots.",
     socials: [
-      { name: "LinkedIn", url: "https://www.linkedin.com/in/ibrahem-sayed-1b38722a4", icon: FiLinkedin },
-      { name: "GitHub", url: "https://github.com/ibacorpration", icon: FiGithub },
-      { name: "Phone", url: "tel:01273446781", icon: FiPhone },
-      { name: "WhatsApp", url: "https://wa.me/201273446781", icon: SiWhatsapp },
-      { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
-      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle }
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/ibrahem-sayed-1b38722a4", icon: RealIcon("https://img.icons8.com/color/48/linkedin.png") },
+      { name: "GitHub", url: "https://github.com/ibacorpration", icon: RealIcon("https://img.icons8.com/fluent/48/github.png") },
+      { name: "Phone", url: "tel:01273446781", icon: RealIcon("https://img.icons8.com/color/48/phone.png") },
+      { name: "WhatsApp", url: "https://wa.me/201273446781", icon: RealIcon("https://img.icons8.com/color/48/whatsapp--v1.png") },
+      { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: RealIcon("https://img.icons8.com/color/48/gmail-new.png") },
+      { name: "Kaggle", url: "https://www.kaggle.com/", icon: RealIcon("https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png") }
     ]
   },
   about: {
