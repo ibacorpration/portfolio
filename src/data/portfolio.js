@@ -1,6 +1,15 @@
 import { FiLinkedin, FiGithub, FiMail, FiPhone } from 'react-icons/fi';
 import { SiKaggle, SiHuggingface, SiPython, SiCplusplus, SiOpencv, SiTensorflow, SiKeras, SiScikitlearn, SiDocker, SiRailway, SiFastapi, SiGithub, SiWhatsapp } from 'react-icons/si';
 
+import React from 'react';
+
+const HuggingFaceIcon = ({ className }) => React.createElement("img", {
+  src: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+  alt: "Hugging Face",
+  className: className,
+  style: { width: '1em', height: '1em' }
+});
+
 export const portfolioData = {
   hero: {
     name: "Ibrahem",
@@ -11,10 +20,10 @@ export const portfolioData = {
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/ibrahem-sayed-1b38722a4", icon: FiLinkedin },
       { name: "GitHub", url: "https://github.com/ibacorpration", icon: FiGithub },
-      { name: "WhatsApp", url: "https://wa.me/201273446781", icon: SiWhatsapp }
       { name: "Phone", url: "tel:01273446781", icon: FiPhone },
+      { name: "WhatsApp", url: "https://wa.me/201273446781", icon: SiWhatsapp },
       { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
-      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle },
+      { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle }
     ]
   },
   about: {
