@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolio';
-import CountUp from './CountUp'; // We'll create this inline
 
 const CountUpInline = ({ end, duration = 2, suffix = '' }) => {
   const [count, setCount] = useState(0);
