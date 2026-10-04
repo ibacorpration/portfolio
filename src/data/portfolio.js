@@ -1,5 +1,5 @@
 import { FiLinkedin, FiGithub, FiMail, FiPhone } from 'react-icons/fi';
-import { SiKaggle, SiHuggingface, SiPython, SiCplusplus, SiOpencv, SiTensorflow, SiKeras, SiScikitlearn, SiDocker, SiRailway, SiFastapi, SiGithub } from 'react-icons/si';
+import { SiKaggle, SiHuggingface, SiPython, SiCplusplus, SiOpencv, SiTensorflow, SiKeras, SiScikitlearn, SiDocker, SiRailway, SiFastapi, SiGithub, SiWhatsapp } from 'react-icons/si';
 
 export const portfolioData = {
   hero: {
@@ -14,7 +14,8 @@ export const portfolioData = {
       { name: "Email", url: "mailto:ibrahemk09zobj@gmail.com", icon: FiMail },
       { name: "Phone", url: "tel:01273446781", icon: FiPhone },
       { name: "Kaggle", url: "https://www.kaggle.com/", icon: SiKaggle },
-      { name: "Hugging Face", url: "https://huggingface.co/", icon: SiHuggingface }
+      { name: "Hugging Face", url: "https://huggingface.co/", icon: SiHuggingface },
+      { name: "WhatsApp", url: "https://wa.me/201273446781", icon: SiWhatsapp }
     ]
   },
   about: {

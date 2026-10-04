@@ -72,67 +72,59 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Content - Profile Card */}
+        {/* Right Content - Redesigned Profile */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative lg:justify-self-end w-full max-w-md mx-auto lg:mx-0"
+          className="relative lg:justify-self-end w-full max-w-lg mx-auto lg:mx-0 flex flex-col items-center"
         >
-          <div className="glass-card p-6 relative overflow-hidden group">
-            {/* Background glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary/40 rounded-full blur-[60px] -z-10"></div>
+          {/* Main Photo with gradient mask */}
+          <div className="relative w-full aspect-square max-w-[380px] mb-8 group">
+            {/* Background Glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-gradient-to-tr from-primary/30 to-secondary/30 rounded-full blur-[80px] -z-10 group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-700"></div>
             
+            {/* Image Container with Mask */}
             <motion.div 
-              animate={{ y: [0, -10, 0] }} 
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="flex flex-col items-center mb-8"
+              animate={{ y: [0, -15, 0] }} 
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              className="w-full h-full rounded-3xl overflow-hidden relative border border-white/5 bg-gradient-to-b from-white/10 to-transparent p-2 shadow-2xl"
             >
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/10 mb-4 bg-gray-800">
-                <img src="/me.jpg" alt={name} className="w-full h-full object-cover" onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Ibrahem&background=0D8ABC&color=fff&size=128' }} />
+              <div 
+                className="w-full h-full rounded-2xl overflow-hidden bg-[#0A0A1F]"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)'
+                }}
+              >
+                <img 
+                  src="/me.jpg" 
+                  alt={name} 
+                  className="w-full h-full object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-700" 
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Ibrahem&background=0D8ABC&color=fff&size=512' }} 
+                />
               </div>
-              <h3 className="text-xl font-bold text-white">{name}</h3>
-              <p className="text-primary font-medium">{title}</p>
-              <p className="text-gray-400 text-sm">{location}</p>
             </motion.div>
-
-            {/* Social Cards Grid */}
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              {socials.map((social, i) => (
-                <a 
-                  key={i} 
-                  href={social.url} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:bg-white/10 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:-translate-y-1 transition-all group/card"
-                >
-                  <social.icon className="text-2xl text-gray-400 group-hover/card:text-primary transition-colors" />
-                  <span className="text-xs text-gray-400 group-hover/card:text-white text-center break-all px-1 max-w-full overflow-hidden text-ellipsis whitespace-nowrap" title={social.name}>{social.name}</span>
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Floating code snippet */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8 }}
-            className="absolute -right-6 -bottom-6 md:-right-12 glass-card p-4 hidden md:block bg-[#1a1b3b]/95 backdrop-blur-xl shadow-2xl z-20"
-          >
-            <div className="flex gap-2 mb-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-            </div>
-            <pre className="text-xs font-mono text-gray-300">
-<span className="text-purple-400">const</span> engineer <span className="text-pink-400">=</span> {'{'}
-  name: <span className="text-green-300">"{name}"</span>,
-  skills: [<span className="text-green-300">"Python"</span>, <span className="text-green-300">"YOLO"</span>, <span className="text-green-300">"RAG"</span>],
-  passion: <span className="text-green-300">"Building AI systems"</span>
-{'}'};
-            </pre>
-          </motion.div>
+          {/* Floating Social Squares */}
+          <div className="flex flex-wrap justify-center gap-4 z-10 w-full max-w-[400px]">
+            {socials.map((social, i) => (
+              <motion.a 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 + (i * 0.1) }}
+                href={social.url} 
+                target="_blank" 
+                rel="noreferrer"
+                className="w-14 h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl flex items-center justify-center hover:bg-gradient-to-tr hover:from-secondary hover:to-primary hover:border-transparent hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-2 transition-all duration-300 group/social"
+                title={social.name}
+              >
+                <social.icon className="text-2xl text-gray-400 group-hover/social:text-white transition-colors" />
+              </motion.a>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
