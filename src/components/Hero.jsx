@@ -57,7 +57,7 @@ const Hero = () => {
           
           <div className="flex flex-wrap gap-4 mb-12">
             <a href="#projects" className="gradient-btn">View My Work ↗</a>
-            <a href="/CV.pdf" target="_blank" rel="noreferrer" className="outline-btn">
+            <a href="https://flowcv.com/resume/632mgn0l0jsd" target="_blank" rel="noreferrer" className="outline-btn">
               Download CV <FiDownload />
             </a>
           </div>
