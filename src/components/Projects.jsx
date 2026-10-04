@@ -26,9 +26,6 @@ const Projects = () => {
             className="glass-card group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-300 flex flex-col h-full overflow-hidden block cursor-pointer"
           >
             <div className="h-48 overflow-hidden relative">
-              <div className="absolute top-4 left-4 z-10 text-white/50 font-bold text-lg">
-                {project.id}
-              </div>
               <img 
                 src={project.image} 
                 alt={project.title} 

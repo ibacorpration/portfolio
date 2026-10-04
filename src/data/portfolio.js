@@ -89,7 +89,7 @@ export const portfolioData = {
       id: "01",
       title: "Smart Face Attend",
       description: "Face-recognition attendance platform with liveness detection and a RAG chatbot.",
-      tags: ["YuNet", "ArcFace", "ONNX", "FastAPI", "React", "Gemini", "Docker"],
+      tags: ["YuNet", "ArcFace", "ONNX", "FastAPI", "React", "Chatbot", "Gemini", "Groq", "Docker"],
       link: "https://iba-corpration.up.railway.app/",
       image: "/attendance.png"
     },
@@ -99,7 +99,7 @@ export const portfolioData = {
       description: "Real-time traffic monitoring: vehicle detection, tracking, speed estimation, Arabic license plate recognition.",
       tags: ["YOLOv8", "ByteTrack", "OCR", "Computer Vision"],
       link: "https://github.com/ibacorpration",
-      image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&q=80&w=600"
+      image: "/safe-road.png"
     },
     {
       id: "03",
