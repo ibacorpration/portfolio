@@ -10,7 +10,7 @@ export const dockSocials = [
 ];
 
 const SocialDock = ({ className = '' }) => (
-  <div className={`inline-flex items-end gap-3 md:gap-4 px-5 py-4 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-xl ${className}`}>
+  <div className={`inline-flex items-end gap-3 md:gap-4 ${className}`}>
     {dockSocials.map((s) => (
       <a
         key={s.name}
