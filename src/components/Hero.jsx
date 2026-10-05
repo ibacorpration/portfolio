@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolio';
 import { SiPython, SiTensorflow, SiOpencv, SiFastapi, SiDocker, SiReact } from 'react-icons/si';
 import { FiDownload } from 'react-icons/fi';
+import SocialDock from './SocialDock';
 
 const Hero = () => {
   const [passionIndex, setPassionIndex] = useState(0);
-  const { name, title, passions, summary, socials, location } = portfolioData.hero;
+  const { name, passions, summary } = portfolioData.hero;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,24 +109,15 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Floating Social Squares */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4 z-10 w-full max-w-[350px] md:max-w-[400px]">
-            {socials.map((social, i) => (
-              <motion.a 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + (i * 0.1) }}
-                href={social.url} 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-12 h-12 md:w-14 md:h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl flex items-center justify-center hover:bg-gradient-to-tr hover:from-secondary hover:to-primary hover:border-transparent hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-2 transition-all duration-300 group/social"
-                title={social.name}
-              >
-                <social.icon className="text-xl md:text-2xl text-gray-400 group-hover/social:text-white transition-colors" />
-              </motion.a>
-            ))}
-          </div>
+          {/* Social Dock */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="z-10"
+          >
+            <SocialDock />
+          </motion.div>
         </motion.div>
       </div>
     </section>
