@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, animate, useInView } from 'framer-motion';
-import { FiLayers, FiAward, FiCpu, FiTarget, FiMapPin, FiBookOpen, FiZap, FiArrowRight, FiDownload } from 'react-icons/fi';
+import { FiLayers, FiAward, FiCpu, FiTarget, FiMapPin, FiBookOpen, FiZap, FiArrowRight } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
 
 const statIcons = [FiLayers, FiAward, FiCpu, FiTarget];
@@ -81,15 +81,6 @@ const About = () => {
           <div className="flex flex-wrap gap-3">
             <a id="about-contact-btn" href="#contact" className="gradient-btn inline-flex items-center gap-2 group">
               Let's Talk <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              id="about-cv-btn"
-              href="https://flowcv.com/resume/632mgn0l0jsd"
-              target="_blank"
-              rel="noreferrer"
-              className="outline-btn inline-flex items-center gap-2"
-            >
-              Resume <FiDownload />
             </a>
           </div>
         </motion.div>
